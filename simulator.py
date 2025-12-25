@@ -48,3 +48,43 @@ def generate_cars():
         print(f"Generated normal cars {i}")
         i += 1
         time.sleep(5)
+
+MOVEMENTS = {
+    "A": [("AL3", "CL1"), ("AL2", "BL1")],
+    "B": [("BL3", "DL1"), ("BL2", "AL1")],
+    "C": [("CL3", "BL1"), ("CL2", "DL1")],
+    "D": [("DL3", "AL1"), ("DL2", "CL1")]
+}
+
+
+def move_cars():
+    while True:
+        for road in ["A", "B", "C", "D"]:
+            if lights[road] == "GREEN":
+                for src, dst in MOVEMENTS[road]:
+                    if lanes[src]:
+                        car = lanes[src].popleft()
+                        lanes[dst].append(car)
+                        print(f"{car} moved {src} -> {dst}")
+                        break
+        time.sleep(1)
+
+
+def print_status():
+    while True:
+        print("\nLane Status:")
+        for k, v in lanes.items():
+            print(f"{k}: {list(v)}")
+        time.sleep(10)
+
+
+if __name__ == "__main__":
+    import threading
+
+    threading.Thread(target=traffic_lights, daemon=True).start()
+    threading.Thread(target=generate_cars, daemon=True).start()
+    threading.Thread(target=move_cars, daemon=True).start()
+    threading.Thread(target=print_status, daemon=True).start()
+
+    while True:
+        time.sleep(1)
