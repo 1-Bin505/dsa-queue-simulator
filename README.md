@@ -20,7 +20,7 @@
 
 
 ## Demo Output
-![OUTPUT GIF](https://github.com/1-Bin505/dsa-queue-simulator/blob/main/output.gif)
+![OUTPUT GIF](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc3NmdXlvNTFwN2g5OHc1eXlrMjBiNGJjY3ZoanM1Znd1czJsaXFzNCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/e4gVsiEYI5XGaRibEJ/giphy.gif)
 
 ## System Architecture
 The project is designed with a **Producer-Consumer** architecture using file I/O as the communication buffer.
