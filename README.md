@@ -16,6 +16,8 @@
 **Course**: Data Structures and Algorithms (COMP202)
 
 ## Introduction
+This project contains all the essentials required for the assignment of **DSA (COMP 202)**. The project simulates a left handed traffic at 4 lane intersection with each lane containig 3 sub lanes. The main goal of this project is to demonstrate efficient Queue Management using a Priority Queue algorithm.
+The approach in the traffic management via a priority lane **(Lane A, sublane L2)** makes this more effective and efficient. It treates the lane AL2 as normally but upon reaching the threshold of 10, it flushes the queue which then optimmizes the traffic.
 
 
 
