@@ -20,8 +20,7 @@
 
 
 ## Demo Output
-
-
+![OUTPUT GIF](URL)
 
 ## System Architecture
 The project is designed with a **Producer-Consumer** architecture using file I/O as the communication buffer.
