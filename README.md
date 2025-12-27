@@ -72,7 +72,7 @@ sudo dnf install python3-pygame    # Fedora
 
 Clone the repository:
 ```bash
-
+git clone https://github.com/1-Bin505/dsa-queue-simulator.git
 ```
 Ensure the folder looks like this:
 ```
